@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class CentralDeInformacoes {
 	private ArrayList<Jogador> todosOsJogadores = new ArrayList<Jogador>();
+	//Central
 	
 	public boolean adicionarJogador(Jogador j) {
 		ValidarDadosDoJogador validar =  new ValidarDadosDoJogador(j);
