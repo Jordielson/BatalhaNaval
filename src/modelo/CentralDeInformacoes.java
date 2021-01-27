@@ -2,7 +2,7 @@ package modelo;
 
 import java.util.ArrayList;
 
-import exceções.*;
+import excecoes.*;
 
 public class CentralDeInformacoes {
 	private ArrayList<Jogador> contasExcluidadas = new ArrayList<Jogador>();

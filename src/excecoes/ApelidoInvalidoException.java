@@ -1,4 +1,4 @@
-package exceções;
+package excecoes;
 
 public class ApelidoInvalidoException extends Exception {
 	private static final long serialVersionUID = 1L;

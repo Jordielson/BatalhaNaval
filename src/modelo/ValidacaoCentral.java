@@ -1,6 +1,6 @@
 package modelo;
 
-import exceções.*;
+import excecoes.*;
 
 public class ValidacaoCentral {
 	public void validarEmail(String email) throws EmailInvalidoException {

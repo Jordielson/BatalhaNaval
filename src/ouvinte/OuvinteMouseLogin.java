@@ -5,7 +5,7 @@ import java.awt.event.MouseListener;
 
 import javax.swing.JOptionPane;
 
-import exceções.EmailInvalidoException;
+import excecoes.EmailInvalidoException;
 import modelo.Login;
 import modelo.Mensageiro;
 import modelo.Util;

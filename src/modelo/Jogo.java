@@ -3,10 +3,10 @@ package modelo;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import exceções.ApelidoInvalidoException;
-import exceções.PessoaDuplicadaException;
-import exceções.PosicaoInvalidaException;
-import exceções.SenhaInvalidaException;
+import excecoes.ApelidoInvalidoException;
+import excecoes.PessoaDuplicadaException;
+import excecoes.PosicaoInvalidaException;
+import excecoes.SenhaInvalidaException;
 
 public class Jogo {
 	private Jogador jogador;

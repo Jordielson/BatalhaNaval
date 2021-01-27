@@ -1,9 +1,9 @@
 package modelo;
 
-import exceções.ApelidoInvalidoException;
-import exceções.EmailInvalidoException;
-import exceções.PessoaDuplicadaException;
-import exceções.SenhaInvalidaException;
+import excecoes.ApelidoInvalidoException;
+import excecoes.EmailInvalidoException;
+import excecoes.PessoaDuplicadaException;
+import excecoes.SenhaInvalidaException;
 
 public class CadastroDeJogador {
 	private CentralDeInformacoes central;

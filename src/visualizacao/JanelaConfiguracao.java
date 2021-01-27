@@ -8,9 +8,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import exceções.ApelidoInvalidoException;
-import exceções.PessoaDuplicadaException;
-import exceções.SenhaInvalidaException;
+import excecoes.ApelidoInvalidoException;
+import excecoes.PessoaDuplicadaException;
+import excecoes.SenhaInvalidaException;
 import modelo.Jogo;
 import ouvinte.OuvinteExcuirConta;
 

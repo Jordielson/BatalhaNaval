@@ -2,13 +2,13 @@ package modelo;
 
 import java.util.ArrayList;
 
-import exceções.PosicaoInvalidaException;
+import excecoes.PosicaoInvalidaException;
 /**
  * A classe Mapa reprensenta o mapa da partida, com todas as posições disponíveis.
  * O Mapa é representado por um array de inteiros com tamanho de 25. Cada indice desse array representa 
  * uma posição, inicialmente, 0 nas posições vazia e 1 nas posições que contém barcos. 
  * 
- * @author Jordielson Emanuel Caldeira da Silva 
+ * @author Jordielson
  *
  */
 

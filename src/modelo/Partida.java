@@ -2,7 +2,7 @@ package modelo;
 
 import java.time.LocalDate;
 
-import exceções.PosicaoInvalidaException;
+import excecoes.PosicaoInvalidaException;
 
 public class Partida {
 	private Jogador jogador;
@@ -24,15 +24,14 @@ public class Partida {
 		mapaJogador.setContar(0);
 	}
 	
-	public void exibir(String s) {
-//		System.out.println(s);
+	public void salvarNoRelatorio(String s) {
 		relatorio.append(s + "\n");
 	}
 	
 	public void start() throws PosicaoInvalidaException {
 		mapaJogador = new Mapa(jogador.getFrota());
 		mapaAdversario = new Mapa(adversario.getFrota());
-		this.exibir(jogador.getApelido() + "  X  " + adversario.getApelido());
+		this.salvarNoRelatorio(jogador.getApelido() + "  X  " + adversario.getApelido());
 	}
 	
 	public int ataqueJogador(int posicao) {
@@ -40,13 +39,13 @@ public class Partida {
 	}
 	
 	public void finalizarPartida() {
-		this.exibir("\n  Mapa de " + jogador.getApelido());
-		this.exibir(mapaJogador.toString());
-		this.exibir("  Mapa de " + adversario.getApelido());
-		this.exibir(mapaAdversario.toString());
+		this.salvarNoRelatorio("\n  Mapa de " + jogador.getApelido());
+		this.salvarNoRelatorio(mapaJogador.toString());
+		this.salvarNoRelatorio("  Mapa de " + adversario.getApelido());
+		this.salvarNoRelatorio(mapaAdversario.toString());
 		
-		this.exibir("Fim de Jogo!!!");
-		this.exibir("Vencedor: " + vencedor.getApelido());
+		this.salvarNoRelatorio("Fim de Jogo!!!");
+		this.salvarNoRelatorio("Vencedor: " + vencedor.getApelido());
 		data = LocalDate.now();
 		jogador.adicionarPartida(this);
 		adversario.adicionarPartida(this);
@@ -66,17 +65,17 @@ public class Partida {
 		if(x == -2){
 			return x;
 		}
-		this.exibir("\n -----Vez de " + apelido + "----- ");
+		this.salvarNoRelatorio("\n -----Vez de " + apelido + "----- ");
 		
 		int linha = posicao/5;
 		int coluna = posicao%5;
-		this.exibir(apelido + " atacou a posição: " + linha + ", " + coluna);
+		this.salvarNoRelatorio(apelido + " atacou a posicao: " + linha + ", " + coluna);
 		if (x == -1) {
-			this.exibir(apelido + " errou o ataque");
+			this.salvarNoRelatorio(apelido + " errou o ataque");
 		} else if(x == 2) {
-			this.exibir(apelido + " acertou uma embarcação");
+			this.salvarNoRelatorio(apelido + " acertou uma embarcacao");
 		} else {
-			this.exibir(apelido + " destruiu uma embarcação");
+			this.salvarNoRelatorio(apelido + " destruiu uma embarcacao");
 			if(mapa.contarBarcosIntactos() == 0) {
 				if(apelido.equals(jogador.getApelido())) {
 					vencedor = jogador;

@@ -1,7 +1,7 @@
 package modelo;
 
-import exceções.EmailInvalidoException;
-import exceções.SenhaInvalidaException;
+import excecoes.EmailInvalidoException;
+import excecoes.SenhaInvalidaException;
 
 public class Login {
 	private CentralDeInformacoes central;
