@@ -42,7 +42,7 @@ public class JanelaCadastroDeJogador extends JFrame {
 		b.setBounds(70, 220, 355, 40);
 		b.addActionListener(new OuvinteCadastro(this));
 		add(b);
-		
+
 		JButton btVoltar = new JButton(Imagens.ICON_VOLTAR);
 		btVoltar.setBounds(25, 15, 28, 28);
 		btVoltar.addActionListener(new ActionListener() {
@@ -105,9 +105,5 @@ public class JanelaCadastroDeJogador extends JFrame {
 	
 	public JLabel getLbDadoInvalido() {
 		return lbDadoInvalido;
-	}
-
-	public static void main(String[] args) {
-		new JanelaCadastroDeJogador();
 	}
 }

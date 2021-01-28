@@ -102,12 +102,12 @@ public class JanelaRank extends JFrame {
 		public void actionPerformed(ActionEvent arg0) {
 			String apelido = JOptionPane.showInputDialog("Nome do jogador");
 			
-			Jogador j = jogo.filtar(apelido);
-			if(j == null) {
-				JOptionPane.showMessageDialog(null, "Nome do jogador não existe no sistema");
+			ArrayList<Jogador> jogadores = jogo.filtar(apelido);
+			if(jogadores.isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Nenhum jogador encontrado no sistema");
 			} else {
-				ArrayList<Jogador> jogadores = new ArrayList<Jogador>();
-				jogadores.add(j);
+//				ArrayList<Jogador> jogadores = new ArrayList<Jogador>();
+//				jogadores.add(j);
 				pane.getViewport().remove(tabela);
 				criarTable(jogadores);
 				pane.getViewport().add(tabela);

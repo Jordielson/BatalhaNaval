@@ -56,13 +56,14 @@ public class Jogo {
 		}
 	}
 	
-	public Jogador filtar(String apelido) {
+	public ArrayList<Jogador> filtar(String apelido) {
+		ArrayList<Jogador> jogadores = new ArrayList<Jogador>();
 		for (Jogador jogador : central.getTodosOsJogadores()) {
-			if(jogador.getApelido().equals(apelido)) {
-				return jogador;
+			if(jogador.getApelido().contains(apelido)) {
+				jogadores.add(jogador);
 			}
 		}
-		return null;
+		return jogadores;
 	}
 	
 	public void excluirConta() {
