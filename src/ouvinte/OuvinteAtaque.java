@@ -7,6 +7,7 @@ import javax.swing.JLabel;
 
 import imagens.Imagens;
 import modelo.Embarcacao;
+import modelo.Frota;
 import modelo.Partida;
 import visualizacao.JanelaPartida;
 import visualizacao.PanelMapa;
@@ -28,20 +29,24 @@ public class OuvinteAtaque implements MouseListener {
 			
 			Partida partida = janela.getPartida();
 			int x = partida.ataqueJogador(posicao);
-			if(x == -1) {
-				lb.setIcon(Imagens.ICON_MAR);
-				lb.paintImmediately(lb.getVisibleRect());
-				janela.mudarturno();
-			} else if(x == 2) {
-				lb.setIcon(Imagens.ICON_EXPLOSION);
-			} else if(x == 3) {
-				Embarcacao e = partida.getAdversario().getFrota().embarcacaoNaPosicao(posicao);
-				janela.adicionarEmbarcacao(e, 320, 130, true);
-				if(partida.getVencedor() != null) {
-					janela.finalizarPartida();
-					janela.salvarJogo();
-				}
+			OuvinteAtaque.ataque(janela, lb, partida.getAdversario().getFrota(), x, posicao, 320);
+			if(partida.getVencedor() != null) {
+				janela.finalizarPartida();
+				janela.salvarJogo();
 			}
+		}
+	}
+	
+	public static void ataque(JanelaPartida janela, JLabel lb, Frota frota, int ataque, int posicao, int p) {
+		if(ataque == -1) {
+			lb.setIcon(Imagens.ICON_MAR);
+			lb.paintImmediately(lb.getVisibleRect());
+			janela.mudarturno();
+		} else if(ataque == 2) {
+			lb.setIcon(Imagens.ICON_EXPLOSION);
+		} else if(ataque == 3) {
+			Embarcacao e = frota.embarcacaoNaPosicao(posicao);
+			janela.adicionarEmbarcacao(e, p, 130, true);
 		}
 	}
 

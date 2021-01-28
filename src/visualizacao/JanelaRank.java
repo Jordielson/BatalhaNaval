@@ -106,8 +106,6 @@ public class JanelaRank extends JFrame {
 			if(jogadores.isEmpty()) {
 				JOptionPane.showMessageDialog(null, "Nenhum jogador encontrado no sistema");
 			} else {
-//				ArrayList<Jogador> jogadores = new ArrayList<Jogador>();
-//				jogadores.add(j);
 				pane.getViewport().remove(tabela);
 				criarTable(jogadores);
 				pane.getViewport().add(tabela);

@@ -5,8 +5,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JLabel;
 
-import imagens.Imagens;
-import modelo.Embarcacao;
 import modelo.Mapa;
 import modelo.Partida;
 import visualizacao.JanelaPartida;
@@ -44,16 +42,7 @@ public class OuvinteBtProximo implements ActionListener {
 			int x = mapa.obterResultadoNaPosicao(ataque);
 			JLabel lb = (JLabel) panelMapa.getComponent(ataque);
 			lb.setHorizontalAlignment(JLabel.CENTER);
-			
-			if (x == -1) {
-				lb.setIcon(Imagens.ICON_MAR);
-				janelaPartida.mudarturno();
-			} else if(x == 2) {
-				lb.setIcon(Imagens.ICON_EXPLOSION);
-			} else if(x == 3) {
-				Embarcacao e = mapa.getFrota().embarcacaoNaPosicao(ataque);
-				janelaPartida.adicionarEmbarcacao(e, p, 130, true);
-			}
+			OuvinteAtaque.ataque(janelaPartida, lb, mapa.getFrota(), x, ataque, p);
 		}
 	}
 	
