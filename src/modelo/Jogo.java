@@ -1,7 +1,7 @@
 package modelo;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Comparator;
 
 import excecoes.ApelidoInvalidoException;
 import excecoes.PessoaDuplicadaException;
@@ -20,31 +20,13 @@ public class Jogo {
 		ordenarPorPontuacao();
 	}
 	
-	public void ordenarPorNome() {
-		ArrayList<Jogador> lista = central.getTodosOsJogadores();
-		String[] nomes = new String[lista.size()];
-		for (int i = 0; i < nomes.length; i++) {
-			nomes[i] = lista.get(i).getApelido();
-		}
-		Arrays.sort(nomes);
-		rank = new ArrayList<Jogador>();
-		for (String string : nomes) {
-			for (Jogador j : lista) {
-				if(j.getApelido().equals(string)) {
-					rank.add(j);
-					break;
-				}
-			}
-		}
-	}
-
-	public void ordenarPorPontuacao() {
+	private void atualizarRank(Comparator<Jogador> comparador) {
 		ArrayList<Jogador> lista = central.getTodosOsJogadores();
 		rank = new ArrayList<Jogador>();
 		for (Jogador j : lista) {
 			boolean b = true;
 			for (int i = 0; i < rank.size(); i++) {
-				if(rank.get(i).getPontuacao() < j.getPontuacao()) {
+				if(comparador.compare(rank.get(i), j) > 0) {
 					rank.add(i, j);
 					b = false;
 					break;
@@ -54,6 +36,14 @@ public class Jogo {
 				rank.add(j);
 			}
 		}
+	}
+	
+	public void ordenarPorNome() {
+		atualizarRank(new ComparacaoNome());
+	}
+
+	public void ordenarPorPontuacao() {
+		atualizarRank(new ComparacaoPontuacao());
 	}
 	
 	public ArrayList<Jogador> filtar(String apelido) {

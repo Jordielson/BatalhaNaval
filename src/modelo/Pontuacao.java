@@ -2,7 +2,7 @@ package modelo;
 
 import java.time.LocalDateTime;
 
-public class Pontuacao {
+public class Pontuacao implements Comparable<Pontuacao>{
 	private LocalDateTime data;
 	private int pontuacao;
 	
@@ -23,5 +23,13 @@ public class Pontuacao {
 	}
 	public void setPontuacao(int pontuacao) {
 		this.pontuacao = pontuacao;
+	}
+	
+	public int compareTo(Pontuacao arg0) {
+		if(pontuacao < arg0.pontuacao)
+			return -1;
+		else if(pontuacao > arg0.pontuacao)
+			return 1;
+		return 0;
 	}
 }

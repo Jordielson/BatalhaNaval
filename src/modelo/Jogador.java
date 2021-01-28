@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import imagens.Users;
 
-public class Jogador {
+public class Jogador implements Comparable<Jogador> {
 	private String apelido;
 	private String email;
 	private String senha;
@@ -122,5 +122,10 @@ public class Jogador {
 	
 	public URL getIcon() {
 		return icon;
+	}
+
+	@Override
+	public int compareTo(Jogador arg0) {
+		return apelido.compareToIgnoreCase(arg0.apelido);
 	}
 }
