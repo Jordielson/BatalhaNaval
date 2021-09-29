@@ -12,7 +12,6 @@ public class EmbarcacaoB implements Embarcacao {
 	}
 	
 	public EmbarcacaoB() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public boolean configurarEmbarcacao(int valor) {

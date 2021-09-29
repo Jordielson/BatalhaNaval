@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -42,7 +43,8 @@ public class JanelaCadastroDeJogador extends JFrame {
 		b.setBounds(70, 220, 355, 40);
 		b.addActionListener(new OuvinteCadastro(this));
 		add(b);
-
+		URL url = Imagens.class.getResource("/resources/imagens/left-arrow.png");
+		System.out.println("ok : " + url);
 		JButton btVoltar = new JButton(Imagens.ICON_VOLTAR);
 		btVoltar.setBounds(25, 15, 28, 28);
 		btVoltar.addActionListener(new ActionListener() {

@@ -19,7 +19,6 @@ public class OuvinteMouseMotion implements MouseMotionListener {
 
 	@Override
 	public void mouseMoved(MouseEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
