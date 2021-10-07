@@ -30,16 +30,9 @@ public class JanelaLogin extends JFrame {
 		adicionarLabels();
 		adiconarTextFields();
 		adicionarBotao();
-//		adicionarCheckBox();
 		
 		setVisible(true);
 	}
-
-//	private void adicionarCheckBox() {
-//		JCheckBox checkBox = new JCheckBox("Lembrar?",null);
-//		checkBox.setBounds(75,150, 100,25);
-//		add(checkBox);
-//	}
 
 	private void adicionarBotao() {
 		JButton b;

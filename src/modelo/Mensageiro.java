@@ -14,7 +14,7 @@ import javax.mail.internet.MimeMessage;
 public class Mensageiro {
 	public static void enviarEmailParaUmJogador(String destinatario, String titulo, String mensagem) {
 		String remetente = "batalhanaval622@gmail.com";
-		String senha = "Batalhanaval3";
+		String senha = "";
 		
 		Properties props = new Properties();
 		

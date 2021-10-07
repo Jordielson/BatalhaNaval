@@ -7,16 +7,16 @@ public class Frota {
 	
 	public Frota() {
 		frota = new ArrayList<Embarcacao>();
-		Embarcacao e = new EmbarcacaoA();
+		Embarcacao e = new EmbarcacaoComDois();
 		e.configurarEmbarcacao(0);
 		frota.add(e);
-		e = new EmbarcacaoA();
+		e = new EmbarcacaoComDois();
 		e.configurarEmbarcacao(5);
 		frota.add(e);
-		e = new EmbarcacaoB();
+		e = new EmbarcacaoComTres();
 		e.configurarEmbarcacao(10);
 		frota.add(e);
-		e = new EmbarcacaoB();
+		e = new EmbarcacaoComTres();
 		e.configurarEmbarcacao(15);
 		frota.add(e);
 	}

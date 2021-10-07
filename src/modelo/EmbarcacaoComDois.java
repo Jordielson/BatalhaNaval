@@ -2,16 +2,16 @@ package modelo;
 
 import java.awt.Point;
 
-public class EmbarcacaoA implements Embarcacao {
+public class EmbarcacaoComDois implements Embarcacao {
 	private int[] embarcacao =  new int[2];
 	private boolean isHorizontal = true;
 	private int barcos = 2;
 	
-	private EmbarcacaoA(int[] e) {
+	private EmbarcacaoComDois(int[] e) {
 		embarcacao = e;
 	}
 	
-	public EmbarcacaoA() {
+	public EmbarcacaoComDois() {
 	}
 	
 	public boolean configurarEmbarcacao(int valor) {
@@ -87,7 +87,7 @@ public class EmbarcacaoA implements Embarcacao {
 	
 	@Override
 	public Embarcacao clonar() {
-		EmbarcacaoA e = new EmbarcacaoA(embarcacao.clone());
+		EmbarcacaoComDois e = new EmbarcacaoComDois(embarcacao.clone());
 		e.isHorizontal = isHorizontal;
 		return e;
 	}

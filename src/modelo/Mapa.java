@@ -48,7 +48,7 @@ public class Mapa {
 	/**
 	 * Converte as coordenas de uma posição na matriz para a posição equivalente no array  
 	 * @param i valor de i na matriz
-	 * @param j valor de i na matriz
+	 * @param j valor de j na matriz
 	 * @return A posição no array referente as coordenadas passadas. Retorna -1 caso a posição não esteja nos limites do mapa. 
 	 */
 	public static int converter(int i, int j) {
