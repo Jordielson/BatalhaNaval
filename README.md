@@ -12,3 +12,7 @@ Neste projeto o professor passou dois desafios que estão na [Descrição do Pro
 O desafio I é dos barcos formar embarcações não foi encontrado muita dificuldade em resolver, a solução foi feita através do polimorfismo no qual teríamos a classe Embarcação e as subclasses EmbaracaçãoComDois e EmbarcaçãoComTrês. 
 
 O desafio II seria a inteligência do computador que após acertar uma embarcação ele continuar atacando ao redor do acerto, a solução para esse desafio foi limitar, após o acerto, em uma lista as casas de ataque do computador. Assim, enquanto a embarcação não for destruída totalmente os ataque do computador ficam limitadas as posições que estão na lista.
+
+## Como Executar
+  - Clone este [repositório](https://github.com/joaopaulopbjp/ifpb_monteiro_dac_2021_2_grupo_1.git) do github na seu computador
+  - Entre na pasta e execute a classe Main, localizada em src/main/Main.java
